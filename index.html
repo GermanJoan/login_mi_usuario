@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #4A90E2, #9013FE);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .left-panel {
+            flex: 1;
+            background: linear-gradient(45deg, #6A82FB, #FC5C7D);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .right-panel {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form button {
+            padding: 10px;
+            background: #4A90E2;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form button:hover {
+            background: #9013FE;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">Mi Plataforma</div>
+            <p class="welcome-text">Bienvenido a la plataforma. Inicia sesión o regístrate para continuar.</p>
+        </div>
+        <div class="right-panel">
+            <h1>Iniciar Sesión</h1>
+            <form class="form" action="login.php" method="POST">
+                <input type="text" name="correo_user" placeholder="Correo Electrónico" required>
+                <input type="password" name="password_user" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+
+            <h1>Registrarse</h1>
+            <form class="form" action="register.php" method="POST">
+                <input type="text" name="nombre_user" placeholder="Nombre" required>
+                <input type="text" name="apellido_user" placeholder="Apellido" required>
+                <input type="email" name="correo_user" placeholder="Correo Electrónico" required>
+                <input type="password" name="password_user" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
